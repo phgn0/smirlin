@@ -19,8 +19,6 @@
         <script>scripts\scrViewController_transformCoords.gml</script>
       </scripts>
       <scripts name="internal">
-        <script>scripts\scrViewController_init.gml</script>
-        <script>scripts\scrViewController_step.gml</script>
         <scripts name="IsometricView">
           <script>scripts\scrIsometricView_init.gml</script>
           <script>scripts\scrIsometricView_transformCoords.gml</script>
@@ -34,16 +32,12 @@
       </scripts>
       <scripts name="internal">
         <script>scripts\scrGridController_drawGrid.gml</script>
-        <script>scripts\scrGridController_draw.gml</script>
-        <script>scripts\scrGridController_init.gml</script>
       </scripts>
       <script>scripts\GridController_doc.gml</script>
     </scripts>
     <scripts name="InputControllers">
       <scripts name="KeyboardController">
         <scripts name="internal">
-          <script>scripts\scrKeyboardController_init.gml</script>
-          <script>scripts\scrKeyboardController_step.gml</script>
           <script>scripts\scrKeyboardController_handleKeypresses.gml</script>
         </scripts>
       </scripts>
@@ -51,7 +45,6 @@
         <scripts name="internal">
           <script>scripts\scrMouseController_onLeft.gml</script>
           <script>scripts\scrMouseController_onWheel.gml</script>
-          <script>scripts\scrMouseController_step.gml</script>
         </scripts>
       </scripts>
       <script>scripts\InputController_doc.gml</script>
@@ -70,9 +63,6 @@
         <script>scripts\scrCameraController_moveCamera.gml</script>
         <script>scripts\scrCameraController_moveCameraAdjusted.gml</script>
         <script>scripts\scrCameraController_zoomIn.gml</script>
-      </scripts>
-      <scripts name="internal">
-        <script>scripts\scrCameraController_init.gml</script>
       </scripts>
     </scripts>
   </scripts>
