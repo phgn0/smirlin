@@ -656,12 +656,13 @@
     <option_xbone_title_id>1234ABCD</option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="5">
+    <constants number="6">
       <constant name="SHOW_GRID">true</constant>
       <constant name="ISOMETRIC_WIDTH_SCALING">2</constant>
-      <constant name="GRID_WIDTH">20</constant>
+      <constant name="GRID_CELL_SIZE">20</constant>
       <constant name="CAMERA_ZOOM_STEP">0.1</constant>
       <constant name="CAMERA_STANDARD_MOVE_FRACTION">0.02</constant>
+      <constant name="MAP_GRID_SIZE">100</constant>
     </constants>
   </ConfigConstants>
 </Config>

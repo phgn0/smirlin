@@ -7,4 +7,4 @@ var grid_x = argument[0];
 var grid_y = argument[1];
 var obj = argument[2];
 
-scrViewController_createInstance(grid_x * GRID_WIDTH, (grid_y + 1) * GRID_WIDTH, obj);
+scrViewController_createInstance(grid_x * GRID_CELL_SIZE, (grid_y + 1) * GRID_CELL_SIZE, obj);

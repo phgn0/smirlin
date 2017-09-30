@@ -26,7 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>/// setup values
-grid_length = 100;
 grid_line_width = 1;
 grid_colour = c_black;
 </string>
