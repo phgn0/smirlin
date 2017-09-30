@@ -8,33 +8,11 @@
   <sprites name="sprites">
     <sprite>sprites\b1</sprite>
     <sprite>sprites\grid_element</sprite>
+    <sprite>sprites\b2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="ViewController">
-      <scripts name="interface">
-        <script>scripts\scrViewController_createInstance.gml</script>
-        <script>scripts\scrViewController_changeInstancePosition.gml</script>
-        <script>scripts\scrViewController_transformCoords.gml</script>
-      </scripts>
-      <scripts name="internal">
-        <scripts name="IsometricView">
-          <script>scripts\scrIsometricView_init.gml</script>
-          <script>scripts\scrIsometricView_transformCoords.gml</script>
-        </scripts>
-      </scripts>
-      <script>scripts\ViewController_doc.gml</script>
-    </scripts>
-    <scripts name="GridController">
-      <scripts name="interface">
-        <script>scripts\scrGridController_createInstance.gml</script>
-      </scripts>
-      <scripts name="internal">
-        <script>scripts\scrGridController_drawGrid.gml</script>
-      </scripts>
-      <script>scripts\GridController_doc.gml</script>
-    </scripts>
     <scripts name="InputControllers">
       <scripts name="KeyboardController">
         <scripts name="internal">
@@ -49,28 +27,51 @@
       </scripts>
       <script>scripts\InputController_doc.gml</script>
     </scripts>
-    <scripts name="CityManager">
-      <script>scripts\scrCityManager_spawnBuildings.gml</script>
-    </scripts>
-    <scripts name="CameraController">
-      <script>scripts\CameraController_doc.gml</script>
-      <scripts name="interface">
-        <scripts name="dragging">
-          <script>scripts\scrCameraController_startDragging.gml</script>
-          <script>scripts\scrCameraController_stopDragging.gml</script>
-          <script>scripts\scrCameraController_draggingStep.gml</script>
+    <scripts name="Framework">
+      <scripts name="ViewController">
+        <scripts name="interface">
+          <script>scripts\scrViewController_createInstance.gml</script>
+          <script>scripts\scrViewController_changeInstancePosition.gml</script>
+          <script>scripts\scrViewController_transformCoords.gml</script>
         </scripts>
-        <script>scripts\scrCameraController_moveCamera.gml</script>
-        <script>scripts\scrCameraController_moveCameraAdjusted.gml</script>
-        <script>scripts\scrCameraController_zoomIn.gml</script>
+        <scripts name="internal">
+          <scripts name="IsometricView">
+            <script>scripts\scrIsometricView_init.gml</script>
+            <script>scripts\scrIsometricView_transformCoords.gml</script>
+          </scripts>
+        </scripts>
+        <script>scripts\ViewController_doc.gml</script>
+      </scripts>
+      <scripts name="GridViewController">
+        <scripts name="interface">
+          <script>scripts\scrGridViewController_createInstance.gml</script>
+        </scripts>
+        <scripts name="internal">
+          <script>scripts\scrGridViewController_drawGrid.gml</script>
+        </scripts>
+        <script>scripts\GridViewController_doc.gml</script>
+      </scripts>
+      <scripts name="CameraController">
+        <script>scripts\CameraController_doc.gml</script>
+        <scripts name="interface">
+          <scripts name="dragging">
+            <script>scripts\scrCameraController_startDragging.gml</script>
+            <script>scripts\scrCameraController_stopDragging.gml</script>
+            <script>scripts\scrCameraController_draggingStep.gml</script>
+          </scripts>
+          <script>scripts\scrCameraController_moveCamera.gml</script>
+          <script>scripts\scrCameraController_moveCameraAdjusted.gml</script>
+          <script>scripts\scrCameraController_zoomIn.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
+    <scripts name="Logic">
+      <scripts name="CityManager">
+        <script>scripts\scrCityManager_spawnBuildings.gml</script>
       </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\objViewController</object>
-    <object>objects\CityManager</object>
-    <object>objects\objGridController</object>
-    <object>objects\objCameraController</object>
     <objects name="InputControllers">
       <object>objects\objMouseController</object>
       <object>objects\objKeyboardController</object>
@@ -78,6 +79,14 @@
     <objects name="Buildings">
       <object>objects\Building</object>
       <object>objects\grid_test</object>
+    </objects>
+    <objects name="Framework">
+      <object>objects\objGridViewController</object>
+      <object>objects\objCameraController</object>
+      <object>objects\objViewController</object>
+    </objects>
+    <objects name="Logic">
+      <object>objects\CityManager</object>
     </objects>
   </objects>
   <rooms name="rooms">
