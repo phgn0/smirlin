@@ -10,5 +10,6 @@ var real_coords = scrViewController_transformCoords(true, pos_x, pos_y);
 with(inst) {
     x = real_coords[0];
     y = real_coords[1];
-    depth = -y; // set render order
 }
+
+scrViewController_setDepth(inst);

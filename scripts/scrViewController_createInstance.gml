@@ -11,9 +11,6 @@ var real_coords = scrViewController_transformCoords(true, abstract_x, abstract_y
 
 var inst = instance_create(real_coords[0], real_coords[1], obj);
 
-with(inst) {
-    // set render order by 2d coords
-    depth = - abstract_y * MAP_GRID_SIZE + abstract_x
-}
+scrViewController_setDepth(inst);
 
 return inst;
