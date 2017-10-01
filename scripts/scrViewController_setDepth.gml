@@ -9,6 +9,6 @@ var abstract_y = argument[2];
 
 with(inst) {
     // set render order by 2d coords
-    depth = - abstract_y * MAP_GRID_SIZE + abstract_x
+    depth = - (abstract_y * MAP_GRID_SIZE + abstract_x);
 }
 
