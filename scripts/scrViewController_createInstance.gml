@@ -1,5 +1,6 @@
 /// scrViewController_createInstance(x, y, obj): instance
-/// Returns an Instance of the provided object and manages the drawing of it. 
+/// Returns an instance of the provided object and manages the drawing of it. 
+/// Position is specified by abstract 2d coords.
 
 // Use changeInstancePosition to change the postion in the future
 
@@ -11,6 +12,6 @@ var real_coords = scrViewController_transformCoords(true, abstract_x, abstract_y
 
 var inst = instance_create(real_coords[0], real_coords[1], obj);
 
-scrViewController_setDepth(inst);
+scrViewController_setDepth(inst, abstract_x, abstract_y);
 
 return inst;

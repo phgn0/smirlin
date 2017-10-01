@@ -12,4 +12,4 @@ with(inst) {
     y = real_coords[1];
 }
 
-scrViewController_setDepth(inst);
+scrViewController_setDepth(inst, pos_x, pos_y);
