@@ -1,10 +1,12 @@
-/// scrCameraController_startDragging(x, y)
-/// starts dragging the camera  with a pointer
+/// scrCameraController_startDragging()
+/// starts dragging the camera with the pointer
 
-// call with current drag pointer (mouse, touch) coordinates
+// will call scrPointerController_getPosition
 
 objCameraController.dragging = true;
 
-objCameraController.drag_x = argument[0];
-objCameraController.drag_y = argument[1];
+var pos = scrPointerController_getPosition();
+
+objCameraController.drag_x = pos[0];
+objCameraController.drag_y = pos[1];
 

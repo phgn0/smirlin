@@ -6,7 +6,7 @@ var is_released = argument[0];
 if (!is_released) {
     // pressed event
     
-    scrCameraController_startDragging(mouse_x, mouse_y);
+    scrCameraController_startDragging();
 } else {
     // released event
     
