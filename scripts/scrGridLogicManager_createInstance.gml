@@ -3,9 +3,9 @@
 
 // x, y grid coords where to start the building (one tile)
 var grid_x = argument[0];   
-var grid_y = argument[0];
+var grid_y = argument[1];
 
-var obj = argument[0];  // object to place
+var obj = argument[2];  // object to place
 
 // check if tiles are free
 //TODO
