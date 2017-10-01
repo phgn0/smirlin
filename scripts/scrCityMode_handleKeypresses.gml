@@ -1,7 +1,7 @@
-/// handleKeypresses()
+/// scrCityMode_handleKeypresses
 /// Processes all current keypresses.
 
-// movement
+// basic movement
 if (keyboard_check(ord("A")) || keyboard_check(vk_left)){
     scrCameraController_moveCameraAdjusted(camera_movement.left);
 }
@@ -13,12 +13,6 @@ if (keyboard_check(ord("D")) || keyboard_check(vk_right)){
 }
 if (keyboard_check(ord("S")) || keyboard_check(vk_down)){
     scrCameraController_moveCameraAdjusted(camera_movement.down);
-}
-
-// building mode
-if (keyboard_check(ord("B"))){
-    global.current_mode = global_modes.building;
-    scrObjectPlacer_start(objBuilding_Template);
 }
 
 // show grid pos DEBUG!!

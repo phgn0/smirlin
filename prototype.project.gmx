@@ -14,36 +14,36 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Modes">
-      <scripts name="ObjectPlacer">
-        <script>scripts\ObjectPlacer_doc.gml</script>
-        <scripts name="interface">
-          <script>scripts\scrObjectPlacer_start.gml</script>
-          <script>scripts\scrObjectPlacer_stop.gml</script>
-          <script>scripts\scrObjectPlacer_place.gml</script>
-        </scripts>
-        <scripts name="internal">
-          <script>scripts\scrObjectPlacer_getCurrentCell.gml</script>
-        </scripts>
-      </scripts>
       <script>scripts\Modes_doc.gml</script>
       <script>scripts\scrModes_init.gml</script>
+      <script>scripts\scrModes_changeMode.gml</script>
+      <scripts name="CityMode">
+        <scripts name="submodules">
+          <scripts name="BuildingMode">
+            <scripts name="input">
+              <script>scripts\scrBuildingMode_handleKeypresses.gml</script>
+              <script>scripts\scrBuildingMode_onLeftClick.gml</script>
+            </scripts>
+            <scripts name="internal">
+              <script>scripts\scrBuildingMode_placeObject.gml</script>
+            </scripts>
+          </scripts>
+          <scripts name="NormalMode">
+            <scripts name="input">
+              <script>scripts\scrNormalmode_onLeft.gml</script>
+              <script>scripts\scrNormalMode_handleKeypresses.gml</script>
+            </scripts>
+          </scripts>
+        </scripts>
+        <scripts name="input">
+          <script>scripts\scrCityMode_handleKeypresses.gml</script>
+          <script>scripts\scrCityMode_onWheel.gml</script>
+        </scripts>
+      </scripts>
     </scripts>
     <scripts name="InputControllers">
-      <scripts name="KeyboardController">
-        <scripts name="internal">
-          <script>scripts\scrKeyboardController_handleKeypresses.gml</script>
-        </scripts>
-      </scripts>
-      <scripts name="PointerController">
-        <scripts name="internal">
-          <script>scripts\scrPointerController_onLeft.gml</script>
-          <script>scripts\scrPointerController_onWheel.gml</script>
-        </scripts>
-        <scripts name="interface">
-          <script>scripts\scrPointerController_getPosition.gml</script>
-        </scripts>
-      </scripts>
       <script>scripts\PointerController_doc.gml</script>
+      <script>scripts\scrPointerController_getPosition.gml</script>
     </scripts>
     <scripts name="Framework">
       <scripts name="ViewController">
@@ -66,6 +66,7 @@
           <script>scripts\scrGridViewController_createInstance.gml</script>
           <script>scripts\scrGridViewController_translateCoordsToGrid.gml</script>
           <script>scripts\scrGridViewController_drawSprite.gml</script>
+          <script>scripts\scrGridViewController_getCurrentCell.gml</script>
         </scripts>
         <scripts name="internal">
           <script>scripts\scrGridViewController_drawGrid.gml</script>
@@ -105,10 +106,6 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <objects name="InputControllers">
-      <object>objects\objMouseController</object>
-      <object>objects\objKeyboardController</object>
-    </objects>
     <objects name="Elements">
       <objects name="Buildings">
         <object>objects\objBuilding</object>
@@ -127,7 +124,9 @@
       <object>objects\objGridLogicManager</object>
     </objects>
     <objects name="Modes">
-      <object>objects\objObjectPlacer</object>
+      <object>objects\objCityMode</object>
+      <object>objects\objNormalMode</object>
+      <object>objects\objBuildingMode</object>
     </objects>
   </objects>
   <rooms name="rooms">

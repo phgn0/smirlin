@@ -1,4 +1,4 @@
-/// scrObjectPlacer_getCurrentCell()
+/// scrGridViewController_getCurrentCell
 /// Get the currently selected grid cell.
 
 var pos = scrPointerController_getPosition();
