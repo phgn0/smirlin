@@ -67,6 +67,7 @@
         </scripts>
         <scripts name="internal">
           <script>scripts\scrGridViewController_drawGrid.gml</script>
+          <script>scripts\scrGridViewController_gridToAbstractCoords.gml</script>
         </scripts>
         <script>scripts\GridViewController_doc.gml</script>
       </scripts>

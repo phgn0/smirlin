@@ -7,6 +7,7 @@ var grid_x = argument[0];
 var grid_y = argument[1];
 var sprite = argument[2];
 
-var real_pos = scrViewController_transformCoords(true, grid_x, grid_y);
+var abstract_coords = scrGridViewController_gridToAbstractCoords(grid_x, grid_y);
+var real_pos = scrViewController_transformCoords(true, abstract_coords[0], abstract_coords[1]);
 
 draw_sprite(sprite, 0, real_pos[0], real_pos[1]);

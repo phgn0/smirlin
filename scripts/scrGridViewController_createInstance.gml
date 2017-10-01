@@ -7,4 +7,6 @@ var grid_x = argument[0];
 var grid_y = argument[1];
 var obj = argument[2];
 
-scrViewController_createInstance(grid_x * GRID_CELL_SIZE, (grid_y + 1) * GRID_CELL_SIZE, obj);
+var abstract_coords = scrGridViewController_gridToAbstractCoords(grid_x, grid_y);
+
+scrViewController_createInstance(abstract_coords[0], abstract_coords[1], obj);
