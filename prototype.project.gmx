@@ -6,26 +6,42 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\b1</sprite>
+    <sprite>sprites\sprB1</sprite>
+    <sprite>sprites\sprB2</sprite>
     <sprite>sprites\grid_element</sprite>
-    <sprite>sprites\b2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="Modes">
+      <scripts name="ObjectPlacer">
+        <script>scripts\ObjectPlacer_doc.gml</script>
+        <scripts name="interface">
+          <script>scripts\scrObjectPlacer_start.gml</script>
+          <script>scripts\scrObjectPlacer_stop.gml</script>
+          <script>scripts\scrObjectPlacer_place.gml</script>
+        </scripts>
+        <scripts name="internal">
+          <script>scripts\scrObjectPlacer_getCurrentCell.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
     <scripts name="InputControllers">
       <scripts name="KeyboardController">
         <scripts name="internal">
           <script>scripts\scrKeyboardController_handleKeypresses.gml</script>
         </scripts>
       </scripts>
-      <scripts name="MouseController">
+      <scripts name="PointerController">
         <scripts name="internal">
-          <script>scripts\scrMouseController_onLeft.gml</script>
-          <script>scripts\scrMouseController_onWheel.gml</script>
+          <script>scripts\scrPointerController_onLeft.gml</script>
+          <script>scripts\scrPointerController_onWheel.gml</script>
+        </scripts>
+        <scripts name="interface">
+          <script>scripts\scrPointerController_getPosition.gml</script>
         </scripts>
       </scripts>
-      <script>scripts\InputController_doc.gml</script>
+      <script>scripts\PointerController_doc.gml</script>
     </scripts>
     <scripts name="Framework">
       <scripts name="ViewController">
@@ -39,12 +55,15 @@
             <script>scripts\scrIsometricView_init.gml</script>
             <script>scripts\scrIsometricView_transformCoords.gml</script>
           </scripts>
+          <script>scripts\scrViewController_setDepth.gml</script>
         </scripts>
         <script>scripts\ViewController_doc.gml</script>
       </scripts>
       <scripts name="GridViewController">
         <scripts name="interface">
           <script>scripts\scrGridViewController_createInstance.gml</script>
+          <script>scripts\scrGridViewController_translateCoordsToGrid.gml</script>
+          <script>scripts\scrGridViewController_drawSprite.gml</script>
         </scripts>
         <scripts name="internal">
           <script>scripts\scrGridViewController_drawGrid.gml</script>
@@ -69,6 +88,17 @@
       <scripts name="CityManager">
         <script>scripts\scrCityManager_spawnBuildings.gml</script>
       </scripts>
+      <scripts name="GridLogicManager">
+        <script>scripts\GridLogicManager_doc.gml</script>
+        <scripts name="interface">
+          <script>scripts\scrGridLogicManager_createInstance.gml</script>
+        </scripts>
+      </scripts>
+    </scripts>
+    <scripts name="Elements">
+      <scripts name="AbstractBuilding">
+        <script>scripts\scrAbstractBuilding_init.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -76,9 +106,13 @@
       <object>objects\objMouseController</object>
       <object>objects\objKeyboardController</object>
     </objects>
-    <objects name="Buildings">
-      <object>objects\Building</object>
-      <object>objects\grid_test</object>
+    <objects name="Elements">
+      <objects name="Buildings">
+        <object>objects\objBuilding</object>
+        <object>objects\objBuilding_Template</object>
+        <object>objects\objBuilding_1</object>
+        <object>objects\objBuilding_2</object>
+      </objects>
     </objects>
     <objects name="Framework">
       <object>objects\objGridViewController</object>
@@ -86,7 +120,11 @@
       <object>objects\objViewController</object>
     </objects>
     <objects name="Logic">
-      <object>objects\CityManager</object>
+      <object>objects\objCityManager</object>
+      <object>objects\objGridLogicManager</object>
+    </objects>
+    <objects name="Modes">
+      <object>objects\objObjectPlacer</object>
     </objects>
   </objects>
   <rooms name="rooms">
