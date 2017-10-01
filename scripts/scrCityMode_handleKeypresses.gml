@@ -16,6 +16,6 @@ if (keyboard_check(ord("S")) || keyboard_check(vk_down)){
 }
 
 // show grid pos DEBUG!!
-if (keyboard_check(ord("P"))){
+if (keyboard_check_pressed(ord("P"))){
     show_message(scrGridViewController_translateCoordsToGrid(mouse_x, mouse_y));
 }

@@ -56,7 +56,7 @@ selected_object = objBuilding_Template;
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="5" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
