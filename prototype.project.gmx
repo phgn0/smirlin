@@ -25,6 +25,8 @@
           <script>scripts\scrObjectPlacer_getCurrentCell.gml</script>
         </scripts>
       </scripts>
+      <script>scripts\Modes_doc.gml</script>
+      <script>scripts\scrModes_init.gml</script>
     </scripts>
     <scripts name="InputControllers">
       <scripts name="KeyboardController">

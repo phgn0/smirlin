@@ -6,10 +6,18 @@ var is_released = argument[0];
 if (!is_released) {
     // pressed event
     
-    scrCameraController_startDragging();
+    if (global.current_mode == global_modes.normal) {
+        scrCameraController_startDragging();
+    } else if (global.current_mode == global_modes.building) {
+        scrObjectPlacer_place();
+        global.current_mode = global_modes.normal;
+    }
+    
 } else {
     // released event
     
-    scrCameraController_stopDragging();
+    if (global.current_mode == global_modes.normal) {
+        scrCameraController_stopDragging();
+    }
 }
 

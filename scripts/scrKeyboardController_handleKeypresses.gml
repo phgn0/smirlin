@@ -17,6 +17,7 @@ if (keyboard_check(ord("S")) || keyboard_check(vk_down)){
 
 // building mode
 if (keyboard_check(ord("B"))){
+    global.current_mode = global_modes.building;
     scrObjectPlacer_start(objBuilding_Template);
 }
 
