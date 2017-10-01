@@ -1,4 +1,4 @@
-/// scrGridController_createInstance(grid_x, grid_y, obj)
+/// scrGridViewController_createInstance(grid_x, grid_y, obj)
 /// create an instance of the proved object on the specified grid position
 
 // (instance origin is the left corner of a grid cell)
