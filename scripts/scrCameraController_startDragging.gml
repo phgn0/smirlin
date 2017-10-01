@@ -3,10 +3,11 @@
 
 // will call scrPointerController_getPosition
 
-objCameraController.dragging = true;
+if (objCameraController.dragging_possible) {
+    objCameraController.dragging = true;
 
-var pos = scrPointerController_getPosition();
+    var pos = scrPointerController_getPosition();
 
-objCameraController.drag_x = pos[0];
-objCameraController.drag_y = pos[1];
-
+    objCameraController.drag_x = pos[0];
+    objCameraController.drag_y = pos[1];
+}

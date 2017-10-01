@@ -35,6 +35,9 @@ enum camera_movement{   // global
 }
 
 dragging = false;
+
+// if we can drag the camera
+dragging_possible = true;
 </string>
           </argument>
         </arguments>
