@@ -19,3 +19,8 @@ if (keyboard_check(ord("S")) || keyboard_check(vk_down)){
 if (keyboard_check(ord("B"))){
     scrObjectPlacer_start(objBuilding_Template);
 }
+
+// show grid pos DEBUG!!
+if (keyboard_check(ord("P"))){
+    show_message(scrGridViewController_translateCoordsToGrid(mouse_x, mouse_y));
+}
