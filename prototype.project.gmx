@@ -9,6 +9,7 @@
     <sprite>sprites\sprB1</sprite>
     <sprite>sprites\sprB2</sprite>
     <sprite>sprites\grid_element</sprite>
+    <sprite>sprites\sprTestMenu</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -127,6 +128,10 @@
       <object>objects\objCityMode</object>
       <object>objects\objNormalMode</object>
       <object>objects\objBuildingMode</object>
+    </objects>
+    <object>objects\objUiTest</object>
+    <objects name="Gui">
+      <object>objects\objGuiHandler</object>
     </objects>
   </objects>
   <rooms name="rooms">
