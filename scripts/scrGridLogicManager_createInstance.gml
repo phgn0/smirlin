@@ -7,10 +7,15 @@ var grid_y = argument[1];
 
 var obj = argument[2];  // object to place
 
-// check if tiles are free
-//TODO
+if (scrGridLogicManager_isLegalPlacement(grid_x, grid_y, obj)) {   
+    // instanciate the object and draw it at the right position
+    var inst = scrGridViewController_createInstance(grid_x, grid_y, obj);
 
-// instanciate the object and draw it at the right position
-var inst = scrGridViewController_createInstance(grid_x, grid_y, obj);
+    scrGridLogicManager_registerBuilding(grid_x, grid_y, obj);
 
-return inst;
+    return inst;
+} else {
+    // illegal placement
+
+    return undefined;
+}

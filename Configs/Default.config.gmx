@@ -262,7 +262,7 @@
     <option_icon>nil</option_icon>
     <option_in_app_purchase_sandbox_mode>0</option_in_app_purchase_sandbox_mode>
     <option_information></option_information>
-    <option_interpolate>True</option_interpolate>
+    <option_interpolate>False</option_interpolate>
     <option_ios_adcolony_enable_V4VC>false</option_ios_adcolony_enable_V4VC>
     <option_ios_advertising_enable>false</option_ios_advertising_enable>
     <option_ios_advertising_key></option_ios_advertising_key>
@@ -657,7 +657,7 @@
   </Options>
   <ConfigConstants>
     <constants number="6">
-      <constant name="SHOW_GRID">true</constant>
+      <constant name="SHOW_GRID">false</constant>
       <constant name="ISOMETRIC_WIDTH_SCALING">2</constant>
       <constant name="GRID_CELL_SIZE">100</constant>
       <constant name="CAMERA_ZOOM_STEP">0.1</constant>

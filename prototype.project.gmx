@@ -67,6 +67,7 @@
     <sprite>sprites\sprB2</sprite>
     <sprite>sprites\grid_element</sprite>
     <sprite>sprites\sprGrass</sprite>
+    <sprite>sprites\sprTree</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -125,6 +126,7 @@
           <script>scripts\scrGridViewController_translateCoordsToGrid.gml</script>
           <script>scripts\scrGridViewController_drawSprite.gml</script>
           <script>scripts\scrGridViewController_getCurrentCell.gml</script>
+          <script>scripts\scrGridViewController_translateGridToRealCoords.gml</script>
         </scripts>
         <scripts name="internal">
           <script>scripts\scrGridViewController_drawGrid.gml</script>
@@ -154,15 +156,15 @@
         <script>scripts\GridLogicManager_doc.gml</script>
         <scripts name="interface">
           <script>scripts\scrGridLogicManager_createInstance.gml</script>
-        </scripts>
-        <scripts name="internal">
           <script>scripts\scrGridLogicManager_registerBuilding.gml</script>
+          <script>scripts\scrGridLogicManager_drawNature.gml</script>
+          <script>scripts\scrGridLogicManager_isLegalPlacement.gml</script>
         </scripts>
       </scripts>
     </scripts>
     <scripts name="Elements">
       <scripts name="AbstractBuilding">
-        <script>scripts\scrAbstractBuilding_init.gml</script>
+        <script>scripts\scrAbstractBuilding_setUp.gml</script>
       </scripts>
     </scripts>
     <scripts name="TweenGMS">
@@ -210,7 +212,7 @@
   <objects name="objects">
     <objects name="Elements">
       <objects name="Buildings">
-        <object>objects\objBuilding</object>
+        <object>objects\objAbstractBuilding</object>
         <object>objects\objBuilding_Template</object>
         <object>objects\objBuilding_1</object>
         <object>objects\objBuilding_2</object>
@@ -236,6 +238,7 @@
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
     </objects>
+    <object>objects\objFPSCounter</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
