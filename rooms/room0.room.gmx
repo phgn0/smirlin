@@ -58,6 +58,7 @@
     <instance objName="objGuiHandler" x="96" y="160" name="inst_285E1F46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGridLogicManager" x="128" y="64" name="inst_C1F81094" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFPSCounter" x="128" y="352" name="inst_DF9D2B29" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objToastManager" x="224" y="160" name="inst_425EA7C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
