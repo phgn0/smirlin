@@ -69,7 +69,7 @@ for (var i = 0; i &lt; MAP_GRID_SIZE; i++) {
 grass_coords = grass_array;
 
 var tree_array;
-for (var t = 0; t &lt; 2000; t++) {
+for (var t = 0; t &lt; TREE_AMOUNT; t++) {
     tree_array[t] = scrGridViewController_translateGridToRealCoords(random(MAP_GRID_SIZE), random(MAP_GRID_SIZE), true);
 }
 

@@ -656,7 +656,8 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="6">
+    <constants number="7">
+      <constant name="TREE_AMOUNT">2000</constant>
       <constant name="SHOW_GRID">false</constant>
       <constant name="ISOMETRIC_WIDTH_SCALING">2</constant>
       <constant name="GRID_CELL_SIZE">100</constant>

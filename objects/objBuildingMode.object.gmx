@@ -47,10 +47,26 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init values
+            <string>/// set up buildings list
 
-selected_object = objBuilding_Template;
+buildings_objects = ds_list_create();
+buildings_configs = ds_list_create();
 
+// read from external config
+var buildings_map = global.external_config[? "buildings"];
+
+// list of all building configs
+var keys_list = buildings_map[? "directory_keys"];
+var size = ds_list_size(keys_list);
+
+for (var i = 0; i &lt; size; i++;) {
+    var key = keys_list[| i];
+    
+    ds_list_add(buildings_configs, buildings_map[? key]);
+    ds_list_add(buildings_objects, scrBuildings_getObject(key));
+}
+
+selected_slot = undefined;
 </string>
           </argument>
         </arguments>
@@ -146,6 +162,38 @@ event_inherited();
         </arguments>
       </action>
     </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw buildings list
+
+var size = ds_list_size(buildings_configs);
+
+for (var i = 0; i &lt; size; i++) {
+    var config = buildings_configs[| i];
+    
+    draw_text(0, 400 + i * 20, string(i + 1) + "  " + config[? "name"]);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -187,9 +235,9 @@ event_inherited();
             <kind>1</kind>
             <string>/// draw picked object sprite at current grid cell
 
-if (selected_object != undefined) {
+if (selected_slot != undefined) {
     var pos = scrGridViewController_getCurrentCell();
-    var sprite = object_get_sprite(selected_object);
+    var sprite = object_get_sprite(buildings_objects[| selected_slot]);
 
     scrGridViewController_drawSprite(pos[0], pos[1], sprite);
 }

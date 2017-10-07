@@ -17,7 +17,7 @@ for (var i = 0; i < MAP_GRID_SIZE; i++) {
 }
 
 // trees
-for (var t = 0; t < 2000; t++) {
+for (var t = 0; t < TREE_AMOUNT; t++) {
     var c = objGridLogicManager.tree_coords[t];
     draw_sprite_ext(sprTree, 0, c[0], c[1], 0.3, 0.3, 0, c_white, 1);
 }

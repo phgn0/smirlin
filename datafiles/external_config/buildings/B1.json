@@ -1,0 +1,10 @@
+{
+	"name": "Building 1",
+	"description": "Test Building 1",
+
+	"size": [2, 1],
+
+	"unlock_requirements": {
+		"cost": 1000
+	}
+}
