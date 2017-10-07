@@ -127,6 +127,9 @@
         <sprite>sprites\sprB1</sprite>
         <sprite>sprites\sprB3</sprite>
       </sprites>
+      <sprites name="Street">
+        <sprite>sprites\sprStreet</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -241,6 +244,9 @@
         <script>scripts\scrBuildings_getObject.gml</script>
         <script>scripts\scrBuildings_setAssetOrigins.gml</script>
       </scripts>
+      <scripts name="Streets">
+        <script>scripts\scrStreets_addTile.gml</script>
+      </scripts>
     </scripts>
     <scripts name="TweenGMS">
       <scripts name="Core">
@@ -303,6 +309,7 @@
         <object>objects\objBuilding_B2</object>
         <object>objects\objBuilding_B3</object>
       </objects>
+      <object>objects\objStreets</object>
     </objects>
     <objects name="Framework">
       <object>objects\objGridViewController</object>
@@ -324,9 +331,9 @@
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>
     </objects>
-    <object>objects\objFPSCounter</object>
     <objects name="helpers">
       <object>objects\objToastManager</object>
+      <object>objects\objFPSCounter</object>
     </objects>
   </objects>
   <rooms name="rooms">

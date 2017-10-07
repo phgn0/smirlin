@@ -71,6 +71,29 @@ selected_slot = undefined;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// init vars
+
+streets = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="1">
       <action>
@@ -183,6 +206,7 @@ event_inherited();
 
 var size = ds_list_size(buildings_configs);
 
+draw_text(0, 380, "0 Street");
 for (var i = 0; i &lt; size; i++) {
     var config = buildings_configs[| i];
     

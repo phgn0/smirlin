@@ -6,7 +6,9 @@ if (keyboard_check_pressed(ord("B"))){
 }
 
 // select objects
-if (keyboard_check_pressed(ord("1"))){
+if (keyboard_check_pressed(ord("0"))){
+    objBuildingMode.streets = true;
+} else if (keyboard_check_pressed(ord("1"))){
     scrBuildingMode_select(1);
 } else if (keyboard_check_pressed(ord("2"))){
     scrBuildingMode_select(2);
