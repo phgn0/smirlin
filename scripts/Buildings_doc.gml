@@ -11,7 +11,7 @@
 
 // Create a JSON file for the building in 
 //   project_dir/datafiles/external_config/buildings/
-// Name it with the name you gave the object earlier (YOURNAME.json)
+// Name it the name you gave the object earlier (YOURNAME.json)
 // Set attributes for the building there (name, description, 
 //   requirements to build)
 // Refer to attributes.txt for possible attributes of the buildings
