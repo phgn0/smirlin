@@ -59,21 +59,30 @@ cell_occupied = array;
             <kind>1</kind>
             <string>/// generate grass, tree positions
 
-var grass_array;
+var trees_grid;
+grass_coords = ds_grid_create(MAP_GRID_SIZE, MAP_GRID_SIZE);
 for (var i = 0; i &lt; MAP_GRID_SIZE; i++) {
     for (var j = 0; j &lt; MAP_GRID_SIZE; j++) {
-        grass_array[i, j] = scrGridViewController_translateGridToRealCoords(i, j);
+        grass_coords[# i, j] = scrGridViewController_translateGridToRealCoords(i, j);
+    
+        trees_grid[i, j] = ds_list_create();
     }
 }
 
-grass_coords = grass_array;
-
-var tree_array;
 for (var t = 0; t &lt; TREE_AMOUNT; t++) {
-    tree_array[t] = scrGridViewController_translateGridToRealCoords(random(MAP_GRID_SIZE), random(MAP_GRID_SIZE), true);
+    // pick random cell for the tree
+    var cell_x = irandom(MAP_GRID_SIZE - 1);
+    var cell_y = irandom(MAP_GRID_SIZE - 1);
+       
+    // create a tree at a random postion in that cell
+    var tree_grid_x = cell_x + random(1);
+    var tree_grid_y = cell_y + random(1);
+    
+    ds_list_add(trees_grid[cell_x, cell_y], 
+            scrGridViewController_translateGridToRealCoords(tree_grid_x, tree_grid_y, true));
 }
 
-tree_coords = tree_array;
+trees = trees_grid;
 </string>
           </argument>
         </arguments>
