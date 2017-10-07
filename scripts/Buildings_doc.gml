@@ -4,6 +4,7 @@
 // Create new object in gm Objects/Elements/Buildings/
 // Set appropriate name for the object (objBuilding_YOURNAME)
 //   this is not the name that shows up in game, just how to refer to it in code
+// Set objAbstractBuilding as parent of the new object
 
 // Create new sprite for the building in gm Sprites/Elements/Buildings
 // Set a appropriate name for the sprite (sprBuilding_YOURNAME)

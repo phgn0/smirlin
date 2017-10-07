@@ -58,7 +58,6 @@ var building_size = config[? "size"];
 var factor = ((building_size[| 0] + building_size[| 1] - 2) * 0.5 + 1);
 
 image_xscale = factor * cell_width / sprite_get_width(object_get_sprite(id.object_index));
-
 image_yscale = image_xscale;
 </string>
           </argument>
