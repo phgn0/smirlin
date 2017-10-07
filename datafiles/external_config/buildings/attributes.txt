@@ -1,8 +1,7 @@
 name: "name of the buidling"
 description: "text to describe the building"
 
-physical: physical attributes
-	size: array of 2d dimensions this building needs
+size: array of 2d dimensions this building needs
 
 unlock_requirements: requirements to unlock this building
 	cost : cost of the building

@@ -1,11 +1,10 @@
 {
 	"name": "Building 2",
 	"description": "Test Building 2",
-
-
+	
 	"size": [1, 1],
 
 	"unlock_requirements": {
 		"cost": 1000
-	},
+	} 
 }
