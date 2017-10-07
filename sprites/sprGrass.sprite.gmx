@@ -32,5 +32,7 @@
     <frame index="9">images\sprGrass_9.png</frame>
     <frame index="10">images\sprGrass_10.png</frame>
     <frame index="11">images\sprGrass_11.png</frame>
+    <frame index="12">images\sprGrass_12.png</frame>
+    <frame index="13">images\sprGrass_13.png</frame>
   </frames>
 </sprite>

@@ -9,7 +9,7 @@ var line_length = GRID_CELL_SIZE * MAP_GRID_SIZE;
 var offset = 0;     // offset to 0,0
 
 // abstract 2d coords
-for (var i = 0; i < MAP_GRID_SIZE; i++) {
+for (var i = 0; i < MAP_GRID_SIZE + 1; i++) {
     // x axis
     var origin = scrViewController_transformCoords(true, offset, 0);
     var dest = scrViewController_transformCoords(true, offset, line_length);
