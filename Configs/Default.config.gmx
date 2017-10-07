@@ -658,7 +658,7 @@
   <ConfigConstants>
     <constants number="7">
       <constant name="TREE_AMOUNT">2000</constant>
-      <constant name="SHOW_GRID">true</constant>
+      <constant name="SHOW_GRID">false</constant>
       <constant name="ISOMETRIC_WIDTH_SCALING">2</constant>
       <constant name="GRID_CELL_SIZE">100</constant>
       <constant name="CAMERA_ZOOM_STEP">0.1</constant>
