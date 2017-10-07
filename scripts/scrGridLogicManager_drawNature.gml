@@ -1,19 +1,10 @@
 /// scrGridLogicManager_drawNature()
-/// Draws Nature (Grass, Trees, ...) on not occupied tiles.
-
-random_set_seed(34); // generate grass type
-var grass_types = sprite_get_number(sprGrass);
+/// Draws Nature (Trees) on not occupied tiles.
 
 for (var i = 0; i < MAP_GRID_SIZE; i++) {
     for (var j = 0; j < MAP_GRID_SIZE; j++) {
-        // grass
-        var type = irandom(grass_types - 1);    // every frame the same (seed)
-        
         // only draw in not occupied cells
         if (not objGridLogicManager.cell_occupied[i, j]) {
-            var c = objGridLogicManager.grass_coords[# i, j];
-            draw_sprite(sprGrass, type, c[0], c[1]);
-            
             // trees at that cell
             var cell_trees = objGridLogicManager.trees[i, j];
             if (ds_exists(cell_trees, ds_type_list)) {

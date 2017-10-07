@@ -234,6 +234,7 @@
           <script>scripts\scrGridLogicManager_registerBuilding.gml</script>
           <script>scripts\scrGridLogicManager_drawNature.gml</script>
           <script>scripts\scrGridLogicManager_isLegalPlacement.gml</script>
+          <script>scripts\scrGridLogicManager_drawGrass.gml</script>
         </scripts>
       </scripts>
     </scripts>
