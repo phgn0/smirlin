@@ -54,3 +54,5 @@ for (i = 0; i < ds_list_size(directories); i++) {
 file_find_close();
 
 global.external_config = config;
+
+scrExternalConfig_hooks();

@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="19" name="datafiles">
-    <datafiles number="19" name="TweenGMS">
+  <datafiles number="20" name="datafiles">
+    <datafiles number="20" name="TweenGMS">
       <datafile>
         <name>Starter_Guide.html</name>
         <exists>-1</exists>
@@ -57,8 +57,8 @@
         <filename>Project_Downloads.txt</filename>
       </datafile>
     </datafiles>
-    <datafiles number="19" name="external_config">
-      <datafiles number="19" name="buildings">
+    <datafiles number="20" name="external_config">
+      <datafiles number="20" name="buildings">
         <datafile>
           <name>B2.json</name>
           <exists>-1</exists>
@@ -93,6 +93,23 @@
           </ConfigOptions>
           <filename>B1.json</filename>
         </datafile>
+        <datafile>
+          <name>B3.json</name>
+          <exists>-1</exists>
+          <size>38</size>
+          <exportAction>2</exportAction>
+          <exportDir></exportDir>
+          <overwrite>0</overwrite>
+          <freeData>-1</freeData>
+          <removeEnd>0</removeEnd>
+          <store>0</store>
+          <ConfigOptions>
+            <Config name="Default">
+              <CopyToMask>9223372036854775807</CopyToMask>
+            </Config>
+          </ConfigOptions>
+          <filename>B3.json</filename>
+        </datafile>
       </datafiles>
     </datafiles>
   </datafiles>
@@ -108,6 +125,7 @@
       <sprites name="Buildings">
         <sprite>sprites\sprB2</sprite>
         <sprite>sprites\sprB1</sprite>
+        <sprite>sprites\sprB3</sprite>
       </sprites>
     </sprites>
   </sprites>
@@ -117,10 +135,12 @@
     <scripts name="ExternalConfig">
       <scripts name="internal">
         <script>scripts\scrExternalConfig_readFile.gml</script>
-        <script>scripts\scrExternalConfig_cleaningHook.gml</script>
       </scripts>
-      <script>scripts\scrExternalConfig_parseConfigs.gml</script>
       <script>scripts\ExternalConfig_doc.gml</script>
+      <scripts name="interface">
+        <script>scripts\scrExternalConfig_parseConfigs.gml</script>
+        <script>scripts\scrExternalConfig_hooks.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Modes">
       <script>scripts\Modes_doc.gml</script>
@@ -182,6 +202,7 @@
         <scripts name="internal">
           <script>scripts\scrGridViewController_drawGrid.gml</script>
           <script>scripts\scrGridViewController_gridToAbstractCoords.gml</script>
+          <script>scripts\scrGridViewController_calcSpriteOrigin.gml</script>
         </scripts>
         <script>scripts\GridViewController_doc.gml</script>
       </scripts>
@@ -218,6 +239,7 @@
         <script>scripts\Buildings_doc.gml</script>
         <script>scripts\scrBuildings_getConfig.gml</script>
         <script>scripts\scrBuildings_getObject.gml</script>
+        <script>scripts\scrBuildings_setAssetOrigins.gml</script>
       </scripts>
     </scripts>
     <scripts name="TweenGMS">
@@ -279,6 +301,7 @@
         <object>objects\objBuilding_Template</object>
         <object>objects\objBuilding_B1</object>
         <object>objects\objBuilding_B2</object>
+        <object>objects\objBuilding_B3</object>
       </objects>
     </objects>
     <objects name="Framework">
