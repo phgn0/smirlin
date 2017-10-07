@@ -1,12 +1,12 @@
-1 - block:{#    |STATEMENT|;#}#
-2 - if:if (|CONDITION|) {#    STATEMENT;#};#
-3 - if-else:if (|CONDITION|) {#    STATEMENT;#}#else {#    STATEMENT;#};#
-4 - for:for (|INITIALISATION|; CONDITION; INCREMENT)#{#    STATEMENT;#};#
-5 - for i:for (var i = 0; i < |CONDITION|; i++) {#    STATEMENT;#};#
-6 - while:while (|CONDITION|) {#    STATEMENT;#};#
-7 - do:do {#    |STATEMENT|;#}#until (CONDITION);#
-8 - repeat:repeat (|EXPRESSION|) {#    STATEMENT;#};#
-9 - switch:switch (|EXPRESSION|) {#    case EXPRESSION: STATEMENT; break;#    default: STATEMENT;#}# 
-0 - with:with (|EXPRESSION|) {#    STATEMENT;#};#  
-comment:// |TEXT|
-multiline comment:/***************************************************#  |TEXT|# ***************************************************/
+1 - block:{#    ||#}#
+2 - if:if (||) {#    #}#
+3 - if-else:if (||) {#    #} else {#    #}#
+4 - for:for (||; ; ) {#    ;#}#
+5 - for i:for (var i = 0; i < ||; i++) {#    #}#
+6 - while:while (||) {#    #}#
+7 - do:do {#    ||#} until ()#
+8 - repeat:repeat (||) {#    #}#
+9 - switch:switch (||) {#    case : ; break;#    default: ;#}# 
+0 - with:with (||) {#    #}#  
+comment:// ||
+multiline comment:/***************************************************#  ||# ***************************************************/
