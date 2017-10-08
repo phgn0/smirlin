@@ -159,6 +159,8 @@
             <scripts name="internal">
               <script>scripts\scrBuildingMode_placeObject.gml</script>
               <script>scripts\scrBuildingMode_selectBuilding.gml</script>
+              <script>scripts\scrBuildingMode_showPreview.gml</script>
+              <script>scripts\scrBuildingMode_unselectBuilding.gml</script>
             </scripts>
           </scripts>
           <scripts name="NormalMode">

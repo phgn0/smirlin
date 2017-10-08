@@ -54,6 +54,7 @@ street_mode = false;
 
 // object that previews the selected building on the selected cell
 preview_instance = undefined;
+show_preview = true;
 </string>
           </argument>
         </arguments>
@@ -143,14 +144,27 @@ event_inherited();
 if (selected_building_slot != undefined) {
     var pos = scrGridViewController_getCurrentCell();
 
-    if (not (pos[0] == objBuildingMode_preview.grid_position[0])
-            or not (pos[1] == objBuildingMode_preview.grid_position[1])) {
+    if (not (pos[0] == preview_instance.grid_position[0])
+            or not (pos[1] == preview_instance.grid_position[1])) {
         // we moved to new cell
+        var config = buildings_configs[| selected_building_slot];
+        var size = config[? "size"];
         
-        objBuildingMode_preview.grid_position = pos;
+        preview_instance.grid_position = pos;
         
-        scrGridViewController_changeInstancePosition(
-                pos[0], pos[1], objBuildingMode.preview_instance);
+        if (scrGridLogicManager_isLegalPlacement(pos[0], pos[1],
+                size[| 0], size[| 1])) {
+            // move preview
+            
+            scrBuildingMode_showPreview(true);
+            
+            scrGridViewController_changeInstancePosition(
+                pos[0], pos[1], preview_instance);
+        } else {
+            // illegal placement
+
+            scrBuildingMode_showPreview(false);
+        }
     } 
 }
 </string>
