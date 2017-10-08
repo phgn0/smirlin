@@ -25,13 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// get reference to external config
+            <string>/// init vars
 
-config = scrBuildings_getConfig(id.object_index);
+// grid cell coords
+grid_position = undefined;
+
+sprite = undefined;
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -48,13 +53,9 @@ config = scrBuildings_getConfig(id.object_index);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// scale to fit whole cells
+            <string>/// draw sprite
 
-var building_size = config[? "size"];
-
-scrAbstractBuilding_scale(id, 
-        sprite_get_width(object_get_sprite(id.object_index)),
-        building_size[| 0], building_size[| 1]);
+draw_sprite_ext(sprite, 0, x, y, image_xscale, image_yscale, 0, c_white, 1);
 </string>
           </argument>
         </arguments>

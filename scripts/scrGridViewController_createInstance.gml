@@ -9,4 +9,4 @@ var obj = argument[2];
 
 var abstract_coords = scrGridViewController_gridToAbstractCoords(grid_x, grid_y);
 
-scrViewController_createInstance(abstract_coords[0], abstract_coords[1], obj);
+return scrViewController_createInstance(abstract_coords[0], abstract_coords[1], obj);

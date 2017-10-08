@@ -47,26 +47,13 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// set up buildings list
+            <string>/// init vars
 
-buildings_objects = ds_list_create();
-buildings_configs = ds_list_create();
+// if we're building streets
+street_mode = false;
 
-// read from external config
-var buildings_map = global.external_config[? "buildings"];
-
-// list of all building configs
-var keys_list = buildings_map[? "directory_keys"];
-var size = ds_list_size(keys_list);
-
-for (var i = 0; i &lt; size; i++;) {
-    var key = keys_list[| i];
-    
-    ds_list_add(buildings_configs, buildings_map[? key]);
-    ds_list_add(buildings_objects, scrBuildings_getObject(key));
-}
-
-selected_slot = undefined;
+// object that previews the selected building on the selected cell
+preview_instance = undefined;
 </string>
           </argument>
         </arguments>
@@ -87,9 +74,85 @@ selected_slot = undefined;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init vars
+            <string>/// set up buildings list
 
-streets = false;
+buildings_configs = ds_list_create();
+
+var buildings_map = global.external_config[? "buildings"];
+
+// list of all building configs
+var keys_list = buildings_map[? "directory_keys"];
+var size = ds_list_size(keys_list);
+
+for (var i = 0; i &lt; size; i++;) {
+    var key = keys_list[| i];
+    
+    //TODO check if requirements satisfied
+    
+    ds_list_add(buildings_configs, buildings_map[? key]);
+}
+
+// the index of the selected building
+selected_building_slot = undefined;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// inherited
+event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// move preview object if mouse moved to new cell
+
+if (selected_building_slot != undefined) {
+    var pos = scrGridViewController_getCurrentCell();
+
+    if (not (pos[0] == objBuildingMode_preview.grid_position[0])
+            or not (pos[1] == objBuildingMode_preview.grid_position[1])) {
+        // we moved to new cell
+        
+        objBuildingMode_preview.grid_position = pos;
+        
+        scrGridViewController_changeInstancePosition(
+                pos[0], pos[1], objBuildingMode.preview_instance);
+    } 
+}
 </string>
           </argument>
         </arguments>
@@ -120,22 +183,41 @@ event_inherited();
       </action>
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>601</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>scrBuildingMode_handleKeypresses();
-</string>
+            <kind>9</kind>
+            <script>scrBuildingMode_handleKeypresses</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -165,6 +247,48 @@ event_inherited();
       </action>
       <action>
         <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>scrBuildingMode_onLeftClick</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -179,13 +303,12 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scrBuildingMode_onLeftClick();
+            <string>/// inherited
+event_inherited();
 </string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -237,34 +360,6 @@ for (var i = 0; i &lt; size; i++) {
             <kind>1</kind>
             <string>/// inherited
 event_inherited();
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// draw picked object sprite at current grid cell
-
-if (selected_slot != undefined) {
-    var pos = scrGridViewController_getCurrentCell();
-    var sprite = object_get_sprite(buildings_objects[| selected_slot]);
-
-    scrGridViewController_drawSprite(pos[0], pos[1], sprite);
-}
 </string>
           </argument>
         </arguments>
