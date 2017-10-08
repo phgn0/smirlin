@@ -88,7 +88,7 @@ trees = trees_grid;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="73">
+    <event eventtype="8" enumb="72">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -105,7 +105,7 @@ trees = trees_grid;
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrGridLogicManager_drawNature</script>
+            <script>scrGridLogicManager_drawGrass</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -130,7 +130,7 @@ trees = trees_grid;
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="72">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>601</id>
@@ -147,7 +147,7 @@ trees = trees_grid;
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>scrGridLogicManager_drawGrass</script>
+            <script>scrGridLogicManager_drawNature</script>
           </argument>
           <argument>
             <kind>0</kind>
