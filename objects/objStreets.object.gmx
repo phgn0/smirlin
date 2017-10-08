@@ -27,7 +27,36 @@
             <kind>1</kind>
             <string>/// create grid
 
-street_grid = ds_grid_create(MAP_GRID_SIZE, MAP_GRID_SIZE);
+//street_grid = ds_grid_create(MAP_GRID_SIZE, MAP_GRID_SIZE);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// REMOVE THIS IS WHEN PROPER SAVE SYSTEM
+var array;
+for (var i = 0; i &lt; MAP_GRID_SIZE; i++) {
+    for (var j = 0; j &lt; MAP_GRID_SIZE; j++) {
+        array[i, j] = false;
+    }
+}
+street_grid = array;
 </string>
           </argument>
         </arguments>
@@ -60,20 +89,20 @@ street_grid = ds_grid_create(MAP_GRID_SIZE, MAP_GRID_SIZE);
 
 for (var i = 0; i &lt; MAP_GRID_SIZE; i++) {
     for (var j = 0; j &lt; MAP_GRID_SIZE; j++) {
-        if (street_grid[# i, j]) {
+        if (street_grid[ i, j]) {
             // generate a value for the current situation
             var value = 0;
             
-            if (j &gt; 0 and street_grid[# i, j - 1]) {  // top
+            if (j &gt; 0 and street_grid[ i, j - 1]) {  // top
                 value += 1;
             }
-            if (i &lt; 49 and street_grid[# i + 1, j]) {  // right
+            if (i &lt; 49 and street_grid[ i + 1, j]) {  // right
                 value += 2;
             }
-            if (j &lt; 49 and street_grid[# i, j + 1]) {  // down
+            if (j &lt; 49 and street_grid[ i, j + 1]) {  // down
                 value += 4;
             }
-            if (i &gt; 0 and street_grid[# i - 1, j]) {  // left
+            if (i &gt; 0 and street_grid[ i - 1, j]) {  // left
                 value += 8;
             }
     
@@ -81,6 +110,8 @@ for (var i = 0; i &lt; MAP_GRID_SIZE; i++) {
         }
     }
 }
+
+
 
 </string>
           </argument>
