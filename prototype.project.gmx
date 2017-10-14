@@ -148,6 +148,9 @@
         <sprite>sprites\sprStreet</sprite>
       </sprites>
     </sprites>
+    <sprites name="GuiObject">
+      <sprite>sprites\sprGuiObject_bubbleClosed</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -190,6 +193,9 @@
         <scripts name="input">
           <script>scripts\scrCityMode_handleKeypresses.gml</script>
           <script>scripts\scrCityMode_onWheel.gml</script>
+        </scripts>
+        <scripts name="gui">
+          <script>scripts\scrCityMode_setupGui.gml</script>
         </scripts>
       </scripts>
     </scripts>
@@ -329,6 +335,21 @@
       <script>scripts\delay.gml</script>
       <script>scripts\ifListConvertToArray.gml</script>
     </scripts>
+    <scripts name="Gui">
+      <scripts name="GuiAnchorPoint">
+        <script>scripts\scrGuiAnchorPoint_getOrigin.gml</script>
+        <script>scripts\scrGuiAnchorPoint_doc.gml</script>
+      </scripts>
+      <script>scripts\scrGui_getRealCoords.gml</script>
+      <scripts name="GuiElements">
+        <script>scripts\GuiElements_doc.gml</script>
+      </scripts>
+      <scripts name="AbstractGuiElement">
+        <script>scripts\scrAbstractGuiElement_setupPosition.gml</script>
+        <script>scripts\scrAbstractGuiElement_setupDimensions.gml</script>
+        <script>scripts\scrAbstractGuiElement_setSpriteScaling.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Elements">
@@ -360,6 +381,10 @@
     </objects>
     <objects name="Gui">
       <object>objects\objGuiHandler</object>
+      <objects name="GuiObjects">
+        <object>objects\objAbstractGuiElement</object>
+        <object>objects\objGuiObject_bubbleMenu</object>
+      </objects>
     </objects>
     <objects name="TweenGMS">
       <object>objects\obj_SharedTweener</object>

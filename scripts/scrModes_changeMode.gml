@@ -11,3 +11,5 @@ with (global.mode_instance) {
 // set new mode
 global.mode = new_mode;
 global.mode_instance = instance_create(0, 0, global.mode_objects[? new_mode]);
+
+scrCityMode_setupGui();
