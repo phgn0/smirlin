@@ -12,7 +12,8 @@ for (var i = 0; i < MAP_GRID_SIZE; i++) {
                 for (var t = 0; t < ds_list_size(cell_trees); t++) {
                     // draw tree
                     var coords = cell_trees[| t];
-                    draw_sprite_ext(sprTree, 0, coords[0], coords[1], 0.3, 0.3, 0, c_white, 1);
+                    draw_sprite_ext(sprTree, 0, coords[0], coords[1], 
+                            TREE_SIZE, TREE_SIZE, 0, c_white, 1);
                 }
             }
         }
