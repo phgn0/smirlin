@@ -7,8 +7,9 @@ with(argument[0]) {
     width_rel = argument[1];
     height_rel = argument[2];
     
-    if (argument[3]) {
-        // scale (width, height) according to ratio
+    if (argument_count > 3) {
+        // given ratio
+        // -> scale (width, height) according to ratio
         
         if (not width_rel) {
             // scale real width

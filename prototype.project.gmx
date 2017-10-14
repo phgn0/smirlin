@@ -383,7 +383,8 @@
       <object>objects\objGuiHandler</object>
       <objects name="GuiObjects">
         <object>objects\objAbstractGuiElement</object>
-        <object>objects\objGuiObject_bubbleMenu</object>
+        <object>objects\objGuiElement_bubbleMenu</object>
+        <object>objects\objGuiElement_topBar</object>
       </objects>
     </objects>
     <objects name="TweenGMS">
