@@ -1,19 +1,17 @@
-/// scrGuiAnchorPoint_getOrigin(inst, anchor point, x_rel, y_rel): [real_x_rel, real_y_rel]
-/// Get the coordinates of the top left corner from an anchor point.
+/// scrGuiAnchorPoint_getOriginCoords(anchor_point, x_rel, y_rel, width, height): [real_x_rel, real_y_rel]
+/// Get coordinates relative to the origin (top left) corner from 
+///   coords relative to an specified (other) anchor point.
 
-// get size from object
-with(argument0) {
-    var obj_width = width;
-    var obj_height = height;
-}
+var obj_width = argument3;
+var obj_height = argument4;
 
 var top_left_coords;
 
 // modify coords based on corner
-top_left_coords[0] = argument2; // x
-top_left_coords[1] = argument3; // y
+top_left_coords[0] = argument1; // x
+top_left_coords[1] = argument2; // y
 
-switch (argument1) {
+switch (argument0) {
     case anchor_point.top_left: 
         break;
     case anchor_point.top_right: 
