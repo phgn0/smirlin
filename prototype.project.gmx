@@ -340,19 +340,14 @@
         <script>scripts\scrGuiAnchorPoint_getOriginCoords.gml</script>
         <script>scripts\scrGuiAnchorPoint_doc.gml</script>
       </scripts>
-      <script>scripts\scrGui_getRealCoords.gml</script>
       <scripts name="GuiElements">
         <script>scripts\GuiElements_doc.gml</script>
       </scripts>
       <scripts name="AbstractGuiElement">
         <script>scripts\scrAbstractGuiElement_setSpriteScaling.gml</script>
         <scripts name="interface">
-          <scripts name="setup">
-            <script>scripts\scrAbstractGuiElement_setupDimensions.gml</script>
-            <script>scripts\scrAbstractGuiElement_setupGlobalPosition.gml</script>
-            <script>scripts\scrAbstractGuiElement_setupLocalCoords.gml</script>
-          </scripts>
           <script>scripts\scrAbstractGuiElement_localToGlobalCoords.gml</script>
+          <script>scripts\scrAbstractGuiElement_getDimensionsFromAspectRatio.gml</script>
         </scripts>
       </scripts>
       <scripts name="Subcomponent">

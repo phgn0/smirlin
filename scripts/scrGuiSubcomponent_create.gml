@@ -1,4 +1,4 @@
-/// scrGuiSubcomponent_create(outer_x, outer_y, outer_anchor, outer_width, outer_height, inner_anchor)
+/// scrGuiSubcomponent_create(outer_x, outer_y, outer_anchor, outer_width, outer_height, [inner_anchor])
 /// Create and return an new gui subcomponent, which has its own local
 ///   coordinate system.
 
