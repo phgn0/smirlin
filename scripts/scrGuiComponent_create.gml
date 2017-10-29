@@ -1,5 +1,5 @@
-/// scrGuiSubcomponent_create(parent_component, outer_x, outer_y, outer_anchor, outer_width, outer_height, [inner_anchor])
-/// Create and return an new gui subcomponent, which has its own local
+/// scrGuiComponent_create(parent_component, outer_x, outer_y, outer_anchor, outer_width, outer_height, [inner_anchor])
+/// Create and return an new gui component, which has its own local
 ///   coordinate system.
 
 // Specify position and size of the component itself using the (outer)
@@ -10,15 +10,14 @@
 var map = ds_map_create();
 
 // save values
-map[? "parent"] = argument0;
+map[? "parent_component"] = argument0;
 
-map[? "outer_x"] = argument1;
-map[? "outer_y"] = argument2;
+map[? "outer_pos"] = array_of(argument1, argument2);
 map[? "outer_anchor"] = argument3;
 
-map[? "outer_width"] = argument4; // size of the component in outer units
-map[? "outer_height"] = argument5;
+map[? "outer_dimensions"] = array_of(argument4, argument5);
 
+// inner anchor optional
 if (argument_count >= 7) {
     map[? "inner_anchor"] = argument[6];
 } else {

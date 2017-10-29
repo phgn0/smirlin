@@ -1,8 +1,8 @@
-/// Subcomponent_doc
+/// GuiComponent_doc
 
-// Gui subcomponents provide methods to nest multiple independent coordinate
+// Gui components provide methods to nest multiple independent coordinate
 //   systems. The created coordinate systems are normalized to the size of
-//   the subcomponent, which means 1 x unit in the subcomponent equals 
+//   the component, which means 1 x unit in the component equals 
 //   width x units in the containing one.
 //   (and 1 inner y unit equals height outer y inits)
 

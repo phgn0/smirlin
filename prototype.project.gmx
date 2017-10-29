@@ -351,15 +351,20 @@
           <script>scripts\scrAbstractGuiElement_getDimensionsFromAspectRatio.gml</script>
         </scripts>
       </scripts>
-      <scripts name="Subcomponent">
+      <scripts name="Component">
         <scripts name="interface">
-          <script>scripts\scrGuiSubcomponent_create.gml</script>
-          <script>scripts\scrGuiSubcomponent_toOuterCoords.gml</script>
-          <script>scripts\scrGuiSubcomponent_toOuterDimensions.gml</script>
-          <script>scripts\scrGuiSubcomponent_toRootCoords.gml</script>
-          <script>scripts\scrGuiSubcomponent_toRootDimensions.gml</script>
+          <script>scripts\scrGuiComponent_create.gml</script>
+          <script>scripts\scrGuiComponent_toOuterCoords.gml</script>
+          <script>scripts\scrGuiComponent_toOuterDimensions.gml</script>
+          <script>scripts\scrGuiComponent_toRootCoords.gml</script>
+          <script>scripts\scrGuiComponent_toRootDimensions.gml</script>
         </scripts>
-        <script>scripts\Subcomponent_doc.gml</script>
+        <script>scripts\GuiComponent_doc.gml</script>
+      </scripts>
+      <scripts name="GuiBox">
+        <scripts name="interface">
+          <script>scripts\scrGuiBox_createRectangle.gml</script>
+        </scripts>
       </scripts>
     </scripts>
   </scripts>
