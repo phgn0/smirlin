@@ -334,6 +334,7 @@
       </scripts>
       <script>scripts\delay.gml</script>
       <script>scripts\ifListConvertToArray.gml</script>
+      <script>scripts\log.gml</script>
     </scripts>
     <scripts name="Gui">
       <scripts name="GuiAnchorPoint">
