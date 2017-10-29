@@ -356,6 +356,8 @@
           <script>scripts\scrGuiSubcomponent_create.gml</script>
           <script>scripts\scrGuiSubcomponent_toOuterCoords.gml</script>
           <script>scripts\scrGuiSubcomponent_toOuterDimensions.gml</script>
+          <script>scripts\scrGuiSubcomponent_toRootCoords.gml</script>
+          <script>scripts\scrGuiSubcomponent_toRootDimensions.gml</script>
         </scripts>
         <script>scripts\Subcomponent_doc.gml</script>
       </scripts>
