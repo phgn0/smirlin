@@ -10,12 +10,14 @@
 var list = ds_list_create();
 
 // save values
-list[| gui_component.parent_component] = argument0;
+list[| gui_component.parent_component] = argument[0];
 
-list[| gui_component.outer_pos] = array_of(argument1, argument2);
-list[| gui_component.outer_anchor] = argument3;
+list[| gui_component.outer_pos] = array_of
+        (argument[1], argument[2]);
+list[| gui_component.outer_anchor] = argument[3];
 
-list[| gui_component.outer_dimensions] = array_of(argument4, argument5);
+list[| gui_component.outer_dimensions] = array_of(
+        argument[4], argument[5]);
 
 // inner anchor optional
 if (argument_count >= 7) {

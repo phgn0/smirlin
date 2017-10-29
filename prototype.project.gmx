@@ -334,12 +334,14 @@
       </scripts>
       <script>scripts\delay.gml</script>
       <script>scripts\ifListConvertToArray.gml</script>
+      <script>scripts\log_test.gml</script>
       <script>scripts\log.gml</script>
     </scripts>
     <scripts name="Gui">
       <scripts name="GuiAnchorPoint">
         <script>scripts\scrGuiAnchorPoint_getOriginCoords.gml</script>
         <script>scripts\scrGuiAnchorPoint_doc.gml</script>
+        <script>scripts\scrGuiAnchorPoint_getCoordsRelativeToOrigin.gml</script>
       </scripts>
       <scripts name="GuiElements">
         <script>scripts\GuiElements_doc.gml</script>
@@ -364,7 +366,9 @@
       <scripts name="GuiBox">
         <scripts name="interface">
           <script>scripts\scrGuiBox_createRectangle.gml</script>
+          <script>scripts\scrGuiBox_drawBox.gml</script>
         </scripts>
+        <script>scripts\GuiBox_doc.gml</script>
       </scripts>
     </scripts>
   </scripts>

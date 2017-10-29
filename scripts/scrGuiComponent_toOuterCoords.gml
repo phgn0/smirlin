@@ -2,7 +2,7 @@
 /// Return the equivalent outer coordinates of a given inner position.
 
 // convert to default inner origin
-var inner_xy = scrGuiAnchorPoint_getOriginCoords(
+var inner_xy = scrGuiAnchorPoint_getCoordsRelativeToOrigin(
         argument0[| gui_component.inner_anchor], 
         argument1, argument2, 1, 1);
 

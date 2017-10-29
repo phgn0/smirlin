@@ -7,7 +7,7 @@ var outer_coords = scrGuiComponent_toOuterCoords(argument0,
     argument1, argument2);
 
 var parent = argument0[| gui_component.parent_component];
-if (parent) {
+if (parent != undefined) {
     // it is not root -> continue recursive
     return scrGuiComponent_toRootCoords(parent, 
             outer_coords[0], outer_coords[1]);

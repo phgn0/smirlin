@@ -1,6 +1,6 @@
-/// scrGuiAnchorPoint_getOriginCoords(anchor_point, x_rel, y_rel, width, height): [real_x_rel, real_y_rel]
-/// Get coordinates relative to the origin (top left) corner from 
-///   coords relative to an specified (other) anchor point.
+/// scrGuiAnchorPoint_getOriginCoords(anchor_point, x, y, width, height)
+/// Get coordinates of the origin (top left) corner from 
+///   coords of an other anchor point.
 
 var obj_width = argument3;
 var obj_height = argument4;
