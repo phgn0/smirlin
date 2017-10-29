@@ -7,21 +7,21 @@
 // Set inner anchor to specify the origin (0,0) position of the new coordinate
 //   system (defaults to top left);
 
-var map = ds_map_create();
+var list = ds_list_create();
 
 // save values
-map[? "parent_component"] = argument0;
+list[| gui_component.parent_component] = argument0;
 
-map[? "outer_pos"] = array_of(argument1, argument2);
-map[? "outer_anchor"] = argument3;
+list[| gui_component.outer_pos] = array_of(argument1, argument2);
+list[| gui_component.outer_anchor] = argument3;
 
-map[? "outer_dimensions"] = array_of(argument4, argument5);
+list[| gui_component.outer_dimensions] = array_of(argument4, argument5);
 
 // inner anchor optional
 if (argument_count >= 7) {
-    map[? "inner_anchor"] = argument[6];
+    list[| gui_component.inner_anchor] = argument[6];
 } else {
-    map[? "inner_anchor"] = anchor_point.top_left;
+    list[| gui_component.inner_anchor] = anchor_point.top_left;
 }
 
-return map;
+return list;

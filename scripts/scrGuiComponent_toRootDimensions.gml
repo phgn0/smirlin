@@ -6,7 +6,7 @@
 var outer_d = scrGuiComponent_toOuterDimensions(argument0, 
     argument1, argument2);
 
-var parent = argument0[? "parent_component"];
+var parent = argument0[| gui_component.parent_component];
 if (parent) {
     // it is not root -> continue recursive
     return scrGuiComponent_toRootDimensions(parent, 
