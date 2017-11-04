@@ -30,6 +30,10 @@
 // gui covers whole window
 gui_width = window_get_width();
 gui_height = window_get_height();
+
+
+root_component = scrGuiComponent_create(undefined, 0, 0, anchor_point.top_left,
+        gui_width, gui_height);
 </string>
           </argument>
         </arguments>

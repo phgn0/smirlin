@@ -9,12 +9,16 @@
 
 var list = ds_list_create();
 
+// calulate Origin coords from coords of an anchor point
+list[| gui_component.outer_pos] = scrGuiAnchorPoint_getOriginCoords(
+        argument[3], 
+        argument[1], argument[2], 
+        argument[4], argument[5]);
+//list[| gui_component.outer_anchor] = argument[3];
+
+
 // save values
 list[| gui_component.parent_component] = argument[0];
-
-list[| gui_component.outer_pos] = array_of
-        (argument[1], argument[2]);
-list[| gui_component.outer_anchor] = argument[3];
 
 list[| gui_component.outer_dimensions] = array_of(
         argument[4], argument[5]);

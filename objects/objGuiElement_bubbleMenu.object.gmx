@@ -51,13 +51,10 @@ event_inherited();
 
 sprite = sprGuiObject_bubbleClosed;
 
-scrAbstractGuiElement_setupDimensions(self,
-        undefined, 0.15, 1);
-        
-scrAbstractGuiElement_setupPosition(self, 
-        anchor_point.bottom_left, 0, 1);
-        
-scrAbstractGuiElement_setSpriteScaling(self);
+comp = scrGuiComponent_create(objGuiHandler.root_component,
+        0, 0.7, anchor_point.top_left, 0.3, 0.3);
+
+box = scrGuiBox_createSprite(comp, 0, 0, 1, 1, sprite);
 </string>
           </argument>
         </arguments>
@@ -104,8 +101,7 @@ event_inherited();
             <kind>1</kind>
             <string>/// draw bubble
 
-draw_sprite_ext(sprite, 0, x, y, sprite_scaling_x, sprite_scaling_y,
-        0, c_white, 1);
+scrGuiBox_drawBox(box);
 </string>
           </argument>
         </arguments>

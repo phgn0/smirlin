@@ -347,9 +347,7 @@
         <script>scripts\GuiElements_doc.gml</script>
       </scripts>
       <scripts name="AbstractGuiElement">
-        <script>scripts\scrAbstractGuiElement_setSpriteScaling.gml</script>
         <scripts name="interface">
-          <script>scripts\scrAbstractGuiElement_localToGlobalCoords.gml</script>
           <script>scripts\scrAbstractGuiElement_getDimensionsFromAspectRatio.gml</script>
         </scripts>
       </scripts>
@@ -366,9 +364,14 @@
       <scripts name="GuiBox">
         <scripts name="interface">
           <script>scripts\scrGuiBox_createRectangle.gml</script>
+          <script>scripts\scrGuiBox_createSprite.gml</script>
           <script>scripts\scrGuiBox_drawBox.gml</script>
         </scripts>
         <script>scripts\GuiBox_doc.gml</script>
+        <scripts name="internal">
+          <script>scripts\scrGuiBox_createBasic.gml</script>
+          <script>scripts\scrGuiBox_getSpriteScale.gml</script>
+        </scripts>
       </scripts>
     </scripts>
   </scripts>
