@@ -5,7 +5,8 @@
 var index = asset_get_index("objBuilding_" + argument0);
 
 if(index == -1) {
-    show_message("object 'objBuilding_" + argument0 + "' does not exist");
+    log("Buildings Framework", 
+            "external_config building '" + argument0 + "' has no corresponding gamemaker object (should me named 'objBuilding_" + argument0 + "')", importance_level.info);
 }
 
 return index;
