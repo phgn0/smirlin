@@ -203,7 +203,7 @@
       <script>scripts\PointerController_doc.gml</script>
       <script>scripts\scrPointerController_getPosition.gml</script>
     </scripts>
-    <scripts name="Framework">
+    <scripts name="Controllers">
       <scripts name="ViewController">
         <scripts name="interface">
           <script>scripts\scrViewController_createInstance.gml</script>
@@ -386,7 +386,7 @@
       </objects>
       <object>objects\objStreets</object>
     </objects>
-    <objects name="Framework">
+    <objects name="Controllers">
       <object>objects\objGridViewController</object>
       <object>objects\objCameraController</object>
       <object>objects\objViewController</object>
