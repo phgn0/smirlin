@@ -6,8 +6,10 @@ if (keyboard_check_pressed(ord("B"))){
 }
 
 if (keyboard_check_pressed(ord("K"))){
+    show_debug_message("saved");
     game_save("Save.dat");
 }
 if (keyboard_check_pressed(ord("L"))){
+    show_debug_message("loaded");
     game_load("Save.dat");
 }
