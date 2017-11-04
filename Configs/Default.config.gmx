@@ -657,8 +657,8 @@
   </Options>
   <ConfigConstants>
     <constants number="8">
-      <constant name="TREE_SIZE">0.7</constant>
-      <constant name="TREE_AMOUNT">1000</constant>
+      <constant name="TREE_SIZE">0.5</constant>
+      <constant name="TREE_AMOUNT">650</constant>
       <constant name="SHOW_GRID">false</constant>
       <constant name="ISOMETRIC_WIDTH_SCALING">2</constant>
       <constant name="GRID_CELL_SIZE">100</constant>

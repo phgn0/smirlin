@@ -1,0 +1,10 @@
+{
+	"name": "small house",
+	"description": "This is a small building",
+	
+	"size": [1, 1],
+
+	"unlock_requirements": {
+		"cost": 1000
+	} 
+}
