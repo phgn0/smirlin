@@ -27,13 +27,6 @@
             <kind>1</kind>
             <string>/// setup values
 
-enum camera_movement{   // global
-    up,
-    down,
-    left,
-    right
-}
-
 dragging = false;
 
 // if we can drag the camera
