@@ -1,16 +1,11 @@
 /// scrGuiComponent_toOuterCoords(component, inner_x, inner_y)
 /// Return the equivalent outer coordinates of a given inner position.
 
-// convert to default inner origin
-var inner_xy = scrGuiAnchorPoint_getCoordsRelativeToOrigin(
-        argument0[| gui_component.inner_anchor], 
-        argument1, argument2, 1, 1);
-
 // convert to outer coord system units
 var component_dimensions = argument0[| gui_component.outer_dimensions];
 
-var x_outer_scaled = inner_xy[0] * component_dimensions[0];
-var y_outer_scaled = inner_xy[1] * component_dimensions[1];
+var x_outer_scaled = argument1 * component_dimensions[0];
+var y_outer_scaled = argument2 * component_dimensions[1];
     
 // add to component origin coords
 var component_pos = argument0[| gui_component.outer_pos];
