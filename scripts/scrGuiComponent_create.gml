@@ -7,6 +7,7 @@
 // If width_height_scaling is provided, one of width or height 
 //   can be undefined, and will be set accordingly.
 
+// get dimensions
 if (argument_count > 6) {
     // scale width or height
     var dimensions = scrGuiComponent_getComponentDimensionsFromAspectRatio(
