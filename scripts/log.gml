@@ -6,7 +6,7 @@ enum importance_level {
     verbose,    // (default) 
     info,
     error,
-    urgent  
+    dev_misuse     // too rude?
 }
 
 var message = argument[0] + ":     " + string(argument[1]);
@@ -17,7 +17,7 @@ if (argument_count >= 3) {
     var level = importance_level.verbose; // default
 }
 
-if (level == importance_level.urgent) {
+if (level == importance_level.dev_misuse) {
     show_message(message);
 } else {
     show_debug_message(message);

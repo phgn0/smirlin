@@ -15,7 +15,7 @@ for (var i = 0; i < size; i++) {
     if(object == -1) {
         // no corresponding object
         log("Buildings Framework", // long debug message
-                "external_config building '" + key + "' has no corresponding gamemaker object (should me named 'objBuilding_" + key + "')", importance_level.info);
+                "external_config building '" + key + "' has no corresponding gamemaker object (should me named 'objBuilding_" + key + "')", importance_level.dev_misuse);
         
         // delete invalid config
         ds_map_delete(buildings_config, key);
