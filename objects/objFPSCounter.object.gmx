@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_black);
+            <string>draw_set_halign(fa_left);
+draw_set_colour(c_black);
 draw_text(0, 0, fps);
 </string>
           </argument>
