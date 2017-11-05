@@ -1,4 +1,4 @@
-/// scrAbstractGuiElement_getDimensionsFromAspectRatio(height, width, width_to_height_ratio)
+/// scrGuiComponent_getDimensionsFromAspectRatio(height, width, width_to_height_ratio)
 /// Returns width and height. One of width and height can be undefined, it will
 ///   be scaled according to the provided aspect ratio.
 

@@ -330,18 +330,17 @@
       <scripts name="GuiElements">
         <script>scripts\GuiElements_doc.gml</script>
       </scripts>
-      <scripts name="AbstractGuiElement">
-        <scripts name="interface">
-          <script>scripts\scrAbstractGuiElement_getDimensionsFromAspectRatio.gml</script>
-        </scripts>
-      </scripts>
+      <scripts name="AbstractGuiElement"/>
       <scripts name="Component">
         <scripts name="interface">
           <script>scripts\scrGuiComponent_create.gml</script>
+          <script>scripts\scrGuiComponent_getDimensionsFromAspectRatio.gml</script>
           <script>scripts\scrGuiComponent_toOuterCoords.gml</script>
           <script>scripts\scrGuiComponent_toOuterDimensions.gml</script>
+          <script>scripts\scrGuiComponent_fromOuterDimensions.gml</script>
           <script>scripts\scrGuiComponent_toRootCoords.gml</script>
           <script>scripts\scrGuiComponent_toRootDimensions.gml</script>
+          <script>scripts\scrGuiComponent_fromRootDimensions.gml</script>
         </scripts>
         <script>scripts\GuiComponent_doc.gml</script>
       </scripts>
