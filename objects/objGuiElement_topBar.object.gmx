@@ -56,7 +56,7 @@ middle = scrGuiComponent_create(comp,
         0.7, 0.8);
 
 bar = scrGuiBox_createRectangle(comp, 0, 0, 1, 1, c_olive);
-bar2 = scrGuiBox_createRectangle(middle, 0, 0, 1, 1, c_aqua);
+bar2 = scrGuiBox_createSprite(comp, 0.5 - 0.05, 1, 0.1, 0.8, sprGuiObject_topBubble_closed);
 
 </string>
           </argument>

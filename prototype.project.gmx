@@ -133,7 +133,9 @@
       </sprites>
     </sprites>
     <sprites name="GuiObject">
-      <sprite>sprites\sprGuiObject_bubbleClosed</sprite>
+      <sprite>sprites\sprGuiObject_topBubble_closed</sprite>
+      <sprite>sprites\sprGuiObject_topBubble_open</sprite>
+      <sprite>sprites\sprGuiObject_menuBubble</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>

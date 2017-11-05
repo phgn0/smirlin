@@ -49,7 +49,7 @@ event_inherited();
             <kind>1</kind>
             <string>/// setup
 
-sprite = sprGuiObject_bubbleClosed;
+sprite = sprGuiObject_menuBubble;
 
 comp = scrGuiComponent_create(objGuiHandler.root_component,
         anchor_point.bottom_left, 0, 1, 
