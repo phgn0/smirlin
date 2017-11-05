@@ -8,6 +8,7 @@
 
 // we use conversion functions that take width and height, so
 //   set the unknown one to 0
+
 if (is_undefined(argument1)) {
     // scale width
     var height = argument2;
@@ -17,15 +18,15 @@ if (is_undefined(argument1)) {
     var width = argument1;
     var height = 0;
 } else {
-    log("GuiComponent dimension scaling", "You provided width, height and width_height scaling. Which one should be scaled?", importance_level.dev_misuse);
+    log("GuiComponent dimension scaling", "You provided width, height and width_height scaling. Which one should be scaled? See the callstack of the following error.", importance_level.dev_misuse);
 }
     
 // convert to root dimensions
 var root_dims = scrGuiComponent_toRootDimensions(argument0,
     width, height);
-   
+
 // set the unknown value (that we replaced with 0) to undefined 
-if (not argument1) {
+if (is_undefined(argument1)) {
     // scale width
     root_dims[@ 0] = undefined;
 } else {

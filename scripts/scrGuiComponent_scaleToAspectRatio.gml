@@ -5,7 +5,7 @@
 // This only works with raw values (does not account for component
 //   coords systems)
 
-if (not argument0) {
+if (is_undefined(argument0)) {
     // scale width
     var height = argument1;
     var width = height * argument2;
