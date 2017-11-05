@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="27" name="datafiles">
-    <datafiles number="27" name="TweenGMS">
+  <datafiles number="37" name="datafiles">
+    <datafiles number="37" name="TweenGMS">
       <datafile>
         <name>Starter_Guide.html</name>
         <exists>-1</exists>
@@ -57,12 +57,12 @@
         <filename>Project_Downloads.txt</filename>
       </datafile>
     </datafiles>
-    <datafiles number="27" name="external_config">
-      <datafiles number="27" name="buildings">
+    <datafiles number="37" name="external_config">
+      <datafiles number="37" name="buildings">
         <datafile>
-          <name>MediumHouse.json</name>
+          <name>TestSkyscraper.json</name>
           <exists>-1</exists>
-          <size>46</size>
+          <size>49</size>
           <exportAction>2</exportAction>
           <exportDir></exportDir>
           <overwrite>0</overwrite>
@@ -74,7 +74,7 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>MediumHouse.json</filename>
+          <filename>TestSkyscraper.json</filename>
         </datafile>
         <datafile>
           <name>SmallHouse.json</name>
@@ -94,9 +94,9 @@
           <filename>SmallHouse.json</filename>
         </datafile>
         <datafile>
-          <name>TestSkyscraper.json</name>
+          <name>MediumHouse.json</name>
           <exists>-1</exists>
-          <size>49</size>
+          <size>46</size>
           <exportAction>2</exportAction>
           <exportDir></exportDir>
           <overwrite>0</overwrite>
@@ -108,7 +108,7 @@
               <CopyToMask>9223372036854775807</CopyToMask>
             </Config>
           </ConfigOptions>
-          <filename>TestSkyscraper.json</filename>
+          <filename>MediumHouse.json</filename>
         </datafile>
       </datafiles>
     </datafiles>
