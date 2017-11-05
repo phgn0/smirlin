@@ -236,8 +236,8 @@
       </scripts>
     </scripts>
     <scripts name="Logic">
-      <scripts name="CityManager">
-        <script>scripts\scrCityManager_spawnBuildings.gml</script>
+      <scripts name="BasicCityManager">
+        <script>scripts\scrBasicCityManager_spawBuilding.gml</script>
       </scripts>
       <scripts name="GridLogicManager">
         <script>scripts\GridLogicManager_doc.gml</script>
@@ -377,7 +377,7 @@
       <object>objects\objViewController</object>
     </objects>
     <objects name="Logic">
-      <object>objects\objCityManager</object>
+      <object>objects\objBasicCityManager</object>
       <object>objects\objGridLogicManager</object>
     </objects>
     <objects name="Modes">

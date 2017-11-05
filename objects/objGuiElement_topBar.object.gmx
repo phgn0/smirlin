@@ -113,6 +113,9 @@ event_inherited();
             <string>scrGuiBox_drawBox(bar);
 scrGuiBox_drawBox(bar2);
 scrGuiBox_drawBox(bubble);
+
+draw_set_halign(fa_right);
+draw_text(objGuiHandler.gui_width, 10, "Population: " + string(objBasicCityManager.population));
 </string>
           </argument>
         </arguments>
