@@ -10,7 +10,7 @@ var valid_keys = ds_list_create();
 for (var i = 0; i < size; i++) {
     var key = keys[| i];
     var building_config = buildings_config[? key];
-    log_test(i, key);
+
     var object = scrBuildings_getObject(key);
     if(object == -1) {
         // no corresponding object
