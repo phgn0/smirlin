@@ -1,4 +1,4 @@
-/// scrGuiComponent_create(parent, x, y, outer_anchor, width, height, [width_height_scale])
+/// scrGuiComponent_create(parent, outer_anchor, x, y, width, height, [width_height_scale])
 /// Create and return an new gui component, which has its own local
 ///   coordinate system.
 
@@ -21,8 +21,8 @@ var list = ds_list_create();
 
 // calulate Origin coords from coords of an anchor point
 list[| gui_component.outer_pos] = scrGuiAnchorPoint_getOriginCoords(
-        argument[3], 
-        argument[1], argument[2], 
+        argument[1], 
+        argument[2], argument[3], 
         dimensions[0], dimensions[1]);
 //list[| gui_component.outer_anchor] = argument[3];
 

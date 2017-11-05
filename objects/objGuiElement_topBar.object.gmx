@@ -49,9 +49,11 @@ event_inherited();
             <kind>1</kind>
             <string>
 comp = scrGuiComponent_create(objGuiHandler.root_component, 
-        0, 0, anchor_point.top_left, 1, 0.1);
+        anchor_point.top_left, 0, 0, 
+        1, 0.1);
 middle = scrGuiComponent_create(comp, 
-        0.05, 0.1, anchor_point.top_left, 0.7, 0.8);
+        anchor_point.top_left, 0.05, 0.1, 
+        0.7, 0.8);
 
 bar = scrGuiBox_createRectangle(comp, 0, 0, 1, 1, c_olive);
 bar2 = scrGuiBox_createRectangle(middle, 0, 0, 1, 1, c_aqua);

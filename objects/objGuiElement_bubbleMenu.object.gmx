@@ -52,7 +52,8 @@ event_inherited();
 sprite = sprGuiObject_bubbleClosed;
 
 comp = scrGuiComponent_create(objGuiHandler.root_component,
-        0, 1, anchor_point.bottom_left, undefined, 0.1, 1);
+        anchor_point.bottom_left, 0, 1, 
+        undefined, 0.1, 1);
 
 box = scrGuiBox_createSprite(comp, 0, 0, 1, 1, sprite);
 </string>
