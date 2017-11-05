@@ -50,19 +50,22 @@ event_inherited();
             <string>
 comp = scrGuiComponent_create(objGuiHandler.root_component, 
         anchor_point.top_left, 0, 0, 
-        1, 0.1);
-middle = scrGuiComponent_create(comp, 
+        1, 0.06);
+middlebar = scrGuiComponent_create(comp, 
         anchor_point.top_left, 0.05, 0.1, 
         0.7, 0.8);
 
 bar = scrGuiBox_createRectangle(comp, 0, 0, 
         1, 1, undefined,
         c_olive);
-bar2 = scrGuiBox_createSprite(comp, 
-        0.5 - 0.05, 0, 
-        0.1, undefined, 1,
-        sprGuiObject_topBubble_closed);
-
+bar2 = scrGuiBox_createRectangle(middlebar, 0, 0, 
+        1, 1, undefined,
+        c_dkgray);
+bubble = scrGuiBox_createSprite(comp, 
+        0.5 - 0.04, 1, 
+        0.08, undefined, 1,
+        sprGuiObject_topBubble_open);
+        
 </string>
           </argument>
         </arguments>
@@ -109,6 +112,7 @@ event_inherited();
             <kind>1</kind>
             <string>scrGuiBox_drawBox(bar);
 scrGuiBox_drawBox(bar2);
+scrGuiBox_drawBox(bubble);
 </string>
           </argument>
         </arguments>
