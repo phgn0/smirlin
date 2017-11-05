@@ -59,12 +59,16 @@ cell_occupied = array;
             <kind>1</kind>
             <string>/// generate grass, tree positions
 
+var grass_types_amount = sprite_get_number(sprGrass);
+
 var trees_grid;
 grass_coords = ds_grid_create(MAP_GRID_SIZE, MAP_GRID_SIZE);
+grass_types = ds_grid_create(MAP_GRID_SIZE, MAP_GRID_SIZE);
 for (var i = 0; i &lt; MAP_GRID_SIZE; i++) {
     for (var j = 0; j &lt; MAP_GRID_SIZE; j++) {
         grass_coords[# i, j] = scrGridViewController_translateGridToRealCoords(i, j);
-    
+        grass_types[# i, j] = irandom(grass_types_amount - 1);
+        
         trees_grid[i, j] = ds_list_create();
     }
 }
