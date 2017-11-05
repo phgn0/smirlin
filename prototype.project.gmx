@@ -334,7 +334,8 @@
       <scripts name="Component">
         <scripts name="interface">
           <script>scripts\scrGuiComponent_create.gml</script>
-          <script>scripts\scrGuiComponent_getDimensionsFromAspectRatio.gml</script>
+          <script>scripts\scrGuiComponent_getComponentDimensionsFromAspectRatio.gml</script>
+          <script>scripts\scrGuiComponent_scaleToAspectRatio.gml</script>
           <script>scripts\scrGuiComponent_toOuterCoords.gml</script>
           <script>scripts\scrGuiComponent_toOuterDimensions.gml</script>
           <script>scripts\scrGuiComponent_fromOuterDimensions.gml</script>
