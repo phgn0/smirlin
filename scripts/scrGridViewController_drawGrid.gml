@@ -1,7 +1,8 @@
-/// scrGridController_drawGrid()
-/// draws helping lines to visualize the grid 
-
-// (has to be done every frame)
+/// scrGridViewController_drawGrid()
+/**
+* descr
+* @param lol - some
+*/
 
 draw_set_colour(grid_colour);
 

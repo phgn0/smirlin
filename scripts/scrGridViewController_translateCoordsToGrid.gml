@@ -1,6 +1,9 @@
 /// scrGridViewController_translateCoordsToGrid(x, y): [grid_x, grid_y]
-/// returns the grid cell coordinates the given coords fall into
 
+/**
+* /// returns the grid cell coordinates the given coords fall into
+* @param lo34l - some34
+*/
 var real_x = argument[0];
 var real_y = argument[1];
 

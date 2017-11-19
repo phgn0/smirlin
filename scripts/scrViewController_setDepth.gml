@@ -1,6 +1,9 @@
 /// scrViewController_setDepth(instance, abstract_x, abstract_x)
 /// Sets the correct depth to the instance, so that it will render correctly
-
+/**
+* desc
+* @param lol - some
+*/
 var inst = argument[0];
 
 // abstract 2d position of the instance

@@ -3,8 +3,8 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="37" name="datafiles">
-    <datafiles number="37" name="TweenGMS">
+  <datafiles number="38" name="datafiles">
+    <datafiles number="38" name="TweenGMS">
       <datafile>
         <name>Starter_Guide.html</name>
         <exists>-1</exists>
@@ -57,8 +57,8 @@
         <filename>Project_Downloads.txt</filename>
       </datafile>
     </datafiles>
-    <datafiles number="37" name="external_config">
-      <datafiles number="37" name="buildings">
+    <datafiles number="38" name="external_config">
+      <datafiles number="38" name="buildings">
         <datafile>
           <name>TestSkyscraper.json</name>
           <exists>-1</exists>
@@ -112,6 +112,23 @@
         </datafile>
       </datafiles>
     </datafiles>
+    <datafile>
+      <name>docs_gm.json</name>
+      <exists>-1</exists>
+      <size>2409</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>docs_gm.json</filename>
+    </datafile>
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\TweenGMS</extension>
@@ -332,7 +349,6 @@
       <scripts name="GuiElements">
         <script>scripts\GuiElements_doc.gml</script>
       </scripts>
-      <scripts name="AbstractGuiElement"/>
       <scripts name="Component">
         <scripts name="interface">
           <script>scripts\scrGuiComponent_create.gml</script>
